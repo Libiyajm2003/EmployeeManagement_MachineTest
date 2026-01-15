@@ -2,7 +2,7 @@
 import React from 'react';
 import {
     Table, TableBody, TableCell, TableContainer,
-    TableHead, TableRow, Paper, Button, IconButton
+    TableHead, TableRow, Paper, IconButton
 } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
@@ -17,6 +17,7 @@ const EmployeeTable = ({ employees, onEdit, onDelete }) => {
                         <TableCell>Email</TableCell>
                         <TableCell>Department</TableCell>
                         <TableCell align="right">Salary</TableCell>
+                        <TableCell>Created On</TableCell> {/* Added CreatedOn column */}
                         <TableCell align="right">Actions</TableCell>
                     </TableRow>
                 </TableHead>
@@ -32,6 +33,9 @@ const EmployeeTable = ({ employees, onEdit, onDelete }) => {
                             <TableCell>{employee.email}</TableCell>
                             <TableCell>{employee.department}</TableCell>
                             <TableCell align="right">{employee.salary}</TableCell>
+                            <TableCell>
+                                {new Date(employee.createdOn).toLocaleString()} {/* Format CreatedOn */}
+                            </TableCell>
                             <TableCell align="right">
                                 <IconButton color="primary" onClick={() => onEdit(employee)}>
                                     <EditIcon />
