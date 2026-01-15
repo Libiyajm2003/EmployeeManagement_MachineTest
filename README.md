@@ -266,6 +266,7 @@ This project is created for assessment purposes.
 
 ---
 
-**Created by:** [Your Name]  
+**Created by:** Libiya J M  
 **Date:** January 2026  
 **Assessment:** Full-Stack CRUD Application Machine Test
+
