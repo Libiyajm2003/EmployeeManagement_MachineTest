@@ -11,17 +11,17 @@ const EmployeeTable = ({ employees, onEdit, onDelete }) => {
     return (
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="employee table">
-                <TableHead>
-                    <TableRow>
-                        <TableCell>ID</TableCell> {/* Added EmployeeId column */}
-                        <TableCell>Name</TableCell>
-                        <TableCell>Email</TableCell>
-                        <TableCell>Department</TableCell>
-                        <TableCell align="right">Salary</TableCell>
-                        <TableCell>Created On</TableCell>
-                        <TableCell align="right">Actions</TableCell>
-                    </TableRow>
-                </TableHead>
+                <TableHead sx={{ backgroundColor: '#d1e3ff' }}>
+  <TableRow>
+    <TableCell sx={{ fontWeight: 'bold' }}>ID</TableCell>
+    <TableCell sx={{ fontWeight: 'bold' }}>Name</TableCell>
+    <TableCell sx={{ fontWeight: 'bold' }}>Email</TableCell>
+    <TableCell sx={{ fontWeight: 'bold' }}>Department</TableCell>
+    <TableCell sx={{ fontWeight: 'bold' }}>Salary</TableCell>
+    <TableCell sx={{ fontWeight: 'bold' }}>Created On</TableCell>
+    <TableCell sx={{ fontWeight: 'bold' }}>Actions</TableCell>
+  </TableRow>
+</TableHead>
                 <TableBody>
                     {employees.map((employee) => (
                         <TableRow
