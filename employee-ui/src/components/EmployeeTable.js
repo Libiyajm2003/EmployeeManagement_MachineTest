@@ -13,11 +13,12 @@ const EmployeeTable = ({ employees, onEdit, onDelete }) => {
             <Table sx={{ minWidth: 650 }} aria-label="employee table">
                 <TableHead>
                     <TableRow>
+                        <TableCell>ID</TableCell> {/* Added EmployeeId column */}
                         <TableCell>Name</TableCell>
                         <TableCell>Email</TableCell>
                         <TableCell>Department</TableCell>
                         <TableCell align="right">Salary</TableCell>
-                        <TableCell>Created On</TableCell> {/* Added CreatedOn column */}
+                        <TableCell>Created On</TableCell>
                         <TableCell align="right">Actions</TableCell>
                     </TableRow>
                 </TableHead>
@@ -27,6 +28,7 @@ const EmployeeTable = ({ employees, onEdit, onDelete }) => {
                             key={employee.employeeId}
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
+                            <TableCell>{employee.employeeId}</TableCell> {/* Display EmployeeId */}
                             <TableCell component="th" scope="row">
                                 {employee.name}
                             </TableCell>
